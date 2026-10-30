@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Efeito Doppler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Calculadora do Efeito Doppler</h1>
+        <p>Informe os dados para calcular a frequência percebida.</p>
+
+        <form id="dopplerForm">
+
+            <label for="vo">Velocidade do observador (m/s)</label>
+            <input type="number" id="vo" min="0" step="any"
+                   placeholder="Ex: 10" required>
+
+            <label for="vf">Velocidade da fonte (m/s)</label>
+            <input type="number" id="vf" min="0" step="any"
+                   placeholder="Ex: 20" required>
+
+            <label for="v">Velocidade do som (m/s)</label>
+            <input type="number" id="v" min="0" step="any"
+                   placeholder="Ex: 340" required>
+
+            <label for="f">Frequência da fonte (Hz)</label>
+            <input type="number" id="f" min="0" step="any"
+                   placeholder="Ex: 500" required>
+
+            <label for="movimento">Movimento relativo</label>
+            <select id="movimento">
+                <option value="aproximando">Aproximando-se</option>
+                <option value="afastando">Afastando-se</option>
+            </select>
+
+            <button type="submit">Calcular frequência</button>
+        </form>
+
+        <div id="resultado" class="resultado">
+            A frequência percebida aparecerá aqui.
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
